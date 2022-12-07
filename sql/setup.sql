@@ -22,6 +22,6 @@ avatar TEXT
 CREATE TABLE posts (
   id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
   user_id BIGINT,
-  description VARCHAR,
+  description VARCHAR(255) NOT NULL,
   FOREIGN KEY (user_id) REFERENCES github_users(id)
 );
